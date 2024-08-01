@@ -1,0 +1,17 @@
+﻿<Window x:Name="mainForm" x:Class="UI.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Button Content="יחידת אירוח" HorizontalAlignment="Left" Height="59" Margin="39,34,0,0" VerticalAlignment="Top" Width="153" Click="Button_Click"/>
+        <Button Content="בקשת לקוח" HorizontalAlignment="Left" Height="57" Margin="39,112,0,0" VerticalAlignment="Top" Width="153" Click="Button_Click_1"/>
+        <Button Content="הזמנה" HorizontalAlignment="Left" Height="61" Margin="39,187,0,0" VerticalAlignment="Top" Width="153" Click="Button_Click_2"/>
+        <Button Content="טופס מארח" HorizontalAlignment="Left" Height="54" Margin="39,276,0,0" VerticalAlignment="Top" Width="153" Click="Button_Click_4"/>
+        <Button Content="טופס לקוח" HorizontalAlignment="Left" Height="59" Margin="249,34,0,0" VerticalAlignment="Top" Width="168" Click="Button_Click_3"/>
+
+    </Grid>
+</Window>

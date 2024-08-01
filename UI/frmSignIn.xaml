@@ -1,0 +1,35 @@
+﻿<Window x:Class="UI.frmSignIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="logIn" Height="407.66" Width="675.137" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="gettyimages-863572618-640x640.jpg"/>
+    </Window.Background>
+    <Grid Margin="3,0,0,8.6" HorizontalAlignment="Left" Width="676">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="264*"/>
+            <RowDefinition Height="119*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="215*"/>
+            <ColumnDefinition Width="76*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="labelID" Content="Enter ID:" FontSize="20" HorizontalAlignment="Left" Height="39" Margin="119,150,0,0" VerticalAlignment="Top" Width="151" FontFamily="Castellar"/>
+        <Label x:Name="labelPass" Content="Password: " FontSize="20" HorizontalAlignment="Left" Height="36" Margin="119,201,0,0" VerticalAlignment="Top" Width="140" FontFamily="Castellar"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="28" Margin="259,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207"/>
+        <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="29" Margin="259,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207"/>
+        <Label Content="Login Type:" FontSize="20" HorizontalAlignment="Left" Height="41" Margin="61,29,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button x:Name="login" Content="Login" HorizontalAlignment="Left" Height="50" Margin="70,46.8,0,0" VerticalAlignment="Top" Width="161" Click="Button_Click" Grid.Row="1" Background="#FFF4F4F4"/>
+        <Button x:Name="reset" Content="Reset" HorizontalAlignment="Left" Height="50" Margin="258,46.8,0,0" VerticalAlignment="Top" Width="169" Grid.Row="1" Background="#FFF4F4F4" Click="reset_Click"/>
+        <Button x:Name="exit" Content="Exit" HorizontalAlignment="Left" Height="50" Margin="455,46.8,0,0" VerticalAlignment="Top" Width="164" Grid.ColumnSpan="2" Grid.Row="1" Background="#FFF4F4F4" Click="exit_Click"/>
+        <RadioButton x:Name="manager" FontSize="20" Content="Manager" HorizontalAlignment="Left" Height="25" Margin="217,35,0,0" VerticalAlignment="Top" Width="114" Checked="manager_Checked"/>
+        <RadioButton x:Name="guest" FontSize="20" Content="Guest" HorizontalAlignment="Left" Height="25" Margin="330,35,0,0" VerticalAlignment="Top" Width="91" Checked="guest_Checked"/>
+        <RadioButton x:Name="host" FontSize="20" Content="Host" HorizontalAlignment="Left" Height="25" Margin="426,35,0,0" VerticalAlignment="Top" Width="147" Grid.ColumnSpan="2" Checked="host_Checked"/>
+        <GroupBox Header="user login" HorizontalAlignment="Left" Height="180" Margin="84,101,0,0" VerticalAlignment="Top" Width="464" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>

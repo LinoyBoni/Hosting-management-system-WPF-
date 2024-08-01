@@ -1,0 +1,84 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="UI.frmGuestRequest"
+        mc:Ignorable="d"
+        Title="frmGuestRequest" Height="887.01" Width="1869.06" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="guestRequestViewSource" d:DesignSource="{d:DesignInstance {x:Type BE:GuestRequest}, CreateList=True}"/>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="cetim-luxuoso-da-textura-de-seda-de-creme-bonita-para-o-fundo-abstrato-foco-suave_55716-1231.jpg"/>
+    </Window.Background>
+    <Grid Margin="37,0,122,49" DataContext="{StaticResource guestRequestViewSource}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1357*"/>
+            <ColumnDefinition Width="346*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="guestRequestDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="10,149,219,230" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False" MouseDoubleClick="guestRequestDataGrid_MouseDoubleClick" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="adultsColumn" Width="SizeToHeader" Header="Adults" Binding="{Binding Adults}"/>
+                <DataGridTextColumn x:Name="areaColumn" Width="SizeToHeader" Header="Area" Binding="{Binding Area}"/>
+                <DataGridTextColumn x:Name="childrenColumn" Width="SizeToHeader" Header="Children" Binding="{Binding Children}"/>
+                <DataGridTextColumn x:Name="childrensAttractionsColumn" Width="SizeToHeader" Header="Childrens Attractions" Binding="{Binding ChildrensAttractions}"/>
+                <DataGridTemplateColumn x:Name="entryDateColumn" Width="SizeToHeader" Header="Entry Date">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding EntryDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="familyNameColumn" Width="SizeToHeader" Header="Family Name" Binding="{Binding FamilyName}"/>
+                <DataGridTextColumn x:Name="gardenColumn" Width="SizeToHeader" Header="Garden" Binding="{Binding Garden}"/>
+                <DataGridTextColumn x:Name="guestRequestKeyColumn" Width="SizeToHeader" Header="Guest Request Key" Binding="{Binding GuestRequestKey}"/>
+                <DataGridTextColumn x:Name="jacuzziColumn" Width="SizeToHeader" Header="Jacuzzi" Binding="{Binding Jacuzzi}"/>
+                <DataGridTextColumn x:Name="mailAddressColumn" Width="SizeToHeader" Header="Mail Address" Binding="{Binding MailAddress}"/>
+                <DataGridTextColumn x:Name="poolColumn" Width="SizeToHeader" Header="Pool" Binding="{Binding Pool}"/>
+                <DataGridTextColumn x:Name="privateNameColumn" Width="SizeToHeader" Header="Private Name" Binding="{Binding PrivateName}"/>
+                <DataGridTemplateColumn x:Name="registrationDateColumn" Width="SizeToHeader" Header="Registration Date">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding RegistrationDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn x:Name="releaseDateColumn" Width="SizeToHeader" Header="Release Date">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding ReleaseDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridCheckBoxColumn x:Name="statusColumn" Width="SizeToHeader" Header="Status" Binding="{Binding Status}"/>
+                <DataGridTextColumn x:Name="subAreaColumn" Width="SizeToHeader" Header="Sub Area" Binding="{Binding SubArea}"/>
+                <DataGridTextColumn x:Name="typeColumn" Width="SizeToHeader" Header="Type" Binding="{Binding Type}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Height="81" Margin="43,38,0,0" VerticalAlignment="Top" Width="333" Click="btnAdd_Click" Grid.RowSpan="2"/>
+        <Button x:Name="btnUpdate" Content="Update the status" HorizontalAlignment="Left" Height="81" Margin="446,38,0,0" VerticalAlignment="Top" Width="236" Click="btnUpdate_Click" Grid.RowSpan="2"/>
+        <RadioButton x:Name="Rds" FontSize="18" Content="south" HorizontalAlignment="Left" Margin="1205,137,0,0" Grid.RowSpan="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="21" Width="85" Checked="Rds_Checked">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.674"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <RadioButton x:Name="Rdw" FontSize="18" Content="west" HorizontalAlignment="Left" Margin="1203,162,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Height="41" Width="136" Checked="Rdw_Checked"/>
+        <RadioButton x:Name="Rde" FontSize="18" Content="east" HorizontalAlignment="Left" Margin="1203,191,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Height="36" Width="89" Checked="Rde_Checked"/>
+        <RadioButton x:Name="Rdn" FontSize="18" Content="north" HorizontalAlignment="Left" Margin="1203,216,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Height="39" Width="136" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="rdALL" Content="all" FontSize="18" HorizontalAlignment="Left" Margin="1203,243,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Checked="rdALL_Checked"/>
+        <GroupBox Header="select" FontSize="16" HorizontalAlignment="Left" Height="186" Margin="1179,107,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="113"/>
+
+    </Grid>
+</Window>

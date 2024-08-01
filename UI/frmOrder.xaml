@@ -1,0 +1,52 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="UI.frmOrder"
+        mc:Ignorable="d"
+        Title="frmOrder" Height="577.8" Width="996.8" Loaded="Window_Loaded">
+    <Window.Resources>
+        <CollectionViewSource x:Key="orderViewSource" d:DesignSource="{d:DesignInstance {x:Type BE:Order}, CreateList=True}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource orderViewSource}">
+        <Grid.Background>
+            <ImageBrush ImageSource="oorder.png"/>
+        </Grid.Background>
+
+        <DataGrid x:Name="orderDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="10,157,448,0.4" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False" MouseDoubleClick="orderDataGrid_MouseDoubleClick" Background="{x:Null}">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn x:Name="createDateColumn" Width="SizeToHeader" Header="Create Date">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding CreateDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="guestRequestKeyColumn" Width="SizeToHeader" Header="Guest Request Key" Binding="{Binding GuestRequestKey}"/>
+                <DataGridTextColumn x:Name="hostingUnitKeyColumn" Width="SizeToHeader" Header="Hosting Unit Key" Binding="{Binding HostingUnitKey}"/>
+                <DataGridTemplateColumn x:Name="orderDateColumn" Width="SizeToHeader" Header="Order Date">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding OrderDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="orderKeyColumn" Width="SizeToHeader" Header="Order Key" Binding="{Binding OrderKey}"/>
+                <DataGridTextColumn x:Name="statusColumn" Width="SizeToHeader" Header="Status" Binding="{Binding Status}"/>
+                <DataGridTextColumn x:Name="sumOfFeeColumn" Width="SizeToHeader" Header="Sum Of Fee" Binding="{Binding SumOfFee}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Height="60" Margin="37,58,0,0" VerticalAlignment="Top" Width="135" Click="btnAdd_Click"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Height="60" Margin="191,58,0,0" VerticalAlignment="Top" Width="141" Click="btnUpdate_Click"/>
+        <GroupBox Header="GroupBox" Foreground="Wheat" HorizontalAlignment="Left" Height="104" Margin="10,29,0,0" VerticalAlignment="Top" Width="346"/>
+        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Height="356" Margin="573,157,0,0" VerticalAlignment="Top" Width="392">
+            <GroupBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.25"/>
+            </GroupBox.Background>
+            <Label x:Name="labelD" Content="Label" HorizontalAlignment="Left" Height="312" Margin="10,10,0,0" VerticalAlignment="Top" Width="357" FontSize="24" FontFamily="Bradley Hand ITC"/>
+        </GroupBox>
+
+    </Grid>
+</Window>

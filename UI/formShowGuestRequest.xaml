@@ -1,0 +1,39 @@
+﻿<Window x:Class="UI.formShowGuestRequest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="formShowGuestRequest" Height="854.268" Width="1255.487" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Window.BindingGroup>
+        <BindingGroup/>
+    </Window.BindingGroup>
+    <Window.Background>
+        <ImageBrush ImageSource="20-luxury-villa-Pocrnja-heated-pool-sauna-gym-pool-table.jpg"/>
+    </Window.Background>
+    <Grid x:Name="grd" HorizontalAlignment="Left" Height="779" Margin="0,10,0,35.8" Width="1184">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="735*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnAdd" Opacity="0.6" Content="Add Request" FontSize="20" Height="70" Margin="10,628,994,0" VerticalAlignment="Top" Click="btnAdd_Click_1" Grid.Row="1" MouseEnter="btnAdd_MouseEnter_1" MouseLeave="btnAdd_MouseLeave_1" Cursor="Hand"/>
+        <Label x:Name="lblName" Content="welcome" HorizontalAlignment="Left" Height="50" Margin="-21,-6,0,0" VerticalAlignment="Top" Width="718" FontSize="41" FontFamily="Brush Script MT" Foreground="White"/>
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="45" Width="173" FontSize="16" Foreground="White" Margin="-21,0,0,0"/>
+        <DataGrid x:Name="dataGridRequest" Height="426" Margin="44,131,941,0" Grid.Row="1" VerticalAlignment="Top" Background="{x:Null}" MouseEnter="dataGridRequest_MouseEnter" MouseLeave="dataGridRequest_MouseLeave" MouseDoubleClick="dataGridRequest_MouseDoubleClick"/>
+        <GroupBox x:Name="grpD" Header="Details" HorizontalAlignment="Left" Height="461" Margin="328,148,0,0" Grid.Row="1" VerticalAlignment="Top" Width="796" RenderTransformOrigin="0.5,0.5" FontSize="29" FontFamily="Guttman Aharoni">
+            <GroupBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.15"/>
+            </GroupBox.Background>
+            <GroupBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.034"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </GroupBox.RenderTransform>
+            <Label x:Name="labelDetails" Content="" FontSize="20" Margin="10,0,17,0" VerticalAlignment="Top" RenderTransformOrigin="0.026,-0.758" Height="402" FontFamily="Algerian"/>
+        </GroupBox>
+    </Grid>
+</Window>

@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95FD423C-BD00-46E0-930A-61608D4939BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="formShowGuestRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormShowHost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddGuestRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddHostingUnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmGuestRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmHostingUnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmSignIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="formShowGuestRequest.xaml.cs">
+      <DependentUpon>formShowGuestRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowHost.xaml.cs">
+      <DependentUpon>FormShowHost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddGuestRequest.xaml.cs">
+      <DependentUpon>frmAddGuestRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddHostingUnit.xaml.cs">
+      <DependentUpon>frmAddHostingUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmAddOrder.xaml.cs">
+      <DependentUpon>frmAddOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmGuestRequest.xaml.cs">
+      <DependentUpon>frmGuestRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmHostingUnit.xaml.cs">
+      <DependentUpon>frmHostingUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrder.xaml.cs">
+      <DependentUpon>frmOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmSignIn.xaml.cs">
+      <DependentUpon>frmSignIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\BE.GuestRequest.datasource" />
+    <None Include="Properties\DataSources\BE.HostingUnit.datasource" />
+    <None Include="Properties\DataSources\BE.Order.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{9025E133-EC46-4BA8-9212-E38C1F5B7774}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{6C1947A4-ABC2-414D-A0DC-346C63F946C6}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\play.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\minus.jpg" />
+    <Resource Include="images\pause.jpg" />
+    <Resource Include="images\plus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\web_evening-night-26b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\stock-photo-luxurious-country-house-near-wilsons-promontory-south-australia-holiday-home-that-can-be-rented-577863877.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="20-luxury-villa-Pocrnja-heated-pool-sauna-gym-pool-table.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\תמונה1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="11111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="2222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="333.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\_23-2147509590.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cetim-luxuoso-da-textura-de-seda-de-creme-bonita-para-o-fundo-abstrato-foco-suave_55716-1231.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="תמונה2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="gettyimages-863572618-640x640.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hotelsdotcom-746035168-8800e4d0_w-719051.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_23-2147509590.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="oorder.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
